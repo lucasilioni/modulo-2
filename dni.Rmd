@@ -1,0 +1,48 @@
+---
+title: "Presentacion modulo 2"
+output:
+  slidy_presentation: default
+  beamer_presentation: default
+  ioslides_presentation: default
+date: "2026-04-22"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+---
+title: "La Penitencia de Newton: Eficiencia Algorítmica"
+subtitle: "Módulo 2: Algoritmos y Costo Computacional"
+author: "Ignacio March"
+date: "`r Sys.Date()`"
+output: 
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+---
+
+## 1. El Problema de la Sumatoria
+
+El desafío consiste en sumar los primeros $n$ números naturales:
+$$S = 1 + 2 + 3 + ... + n$$
+
+En este ejercicio, evaluamos dos enfoques para resolverlo:
+1. **Enfoque Iterativo:** Sumar uno por uno mediante un bucle.
+2. **Enfoque Analítico:** Utilizar la fórmula matemática de Gauss.
+
+**Objetivo:** Comparar el tiempo de ejecución (costo computacional) de ambos métodos.
+
+---
+
+## 2. Configuración Inicial (Personalización)
+
+Utilizamos las últimas cifras del DNI para definir nuestra semilla de datos inicial.
+
+```{r, echo=TRUE}
+# Últimas 3 cifras del DNI
+dni_val <- 887
+# Creación de vector secuencia
+secuencia_dni <- (1:dni_val)
+head(secuencia_dni)
